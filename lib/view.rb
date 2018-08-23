@@ -5,13 +5,13 @@ class CookbookView
     end
   end
 
-  def ask_user_for_description
+  def get_new_recipe
     puts "Please describe the receipt"
     "-----------"
     gets.chomp
   end
 
-  def ask_user_for_index
+  def get_recipe_index
     puts "Index?"
     gets.chomp.to_i - 1
   end

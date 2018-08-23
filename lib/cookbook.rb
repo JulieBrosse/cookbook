@@ -4,12 +4,12 @@ class Cookbook
     @recipes = []
   end
 
-  def add(recipe)
-    @recipes << recipe
-  end
-
   def all
     @recipes
+  end
+
+  def add(recipe)
+    @recipes << recipe
   end
 
   def find(index)
@@ -17,6 +17,6 @@ class Cookbook
   end
 
   def remove(index)
-    @recipes.delete_at(index)
+    @recipes.delete_at[index]
   end
 end
