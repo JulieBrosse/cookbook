@@ -24,9 +24,9 @@ class Router
 
   def dispatch(action)
     case action
-    when 1 then @controller.list
-    when 2 then @controller.create
-    when 3 then @controller.destroy
+    when 1 then @recipes_controller.print_recipes
+    when 2 then @recipes_controller.add_recipe
+    when 3 then @recipes_controller.remove_recipe
     else
       puts "Please type 1, 2 or 3 :)"
     end

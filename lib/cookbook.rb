@@ -1,5 +1,6 @@
 class Cookbook
-  require_relative "../model/recipe.rb"
+  require_relative "recipe"
+
   def initialize
     @recipes = []
   end
@@ -17,6 +18,6 @@ class Cookbook
   end
 
   def remove(index)
-    @recipes.delete_at[index]
+    @recipes.delete_at(index - 1)
   end
 end
