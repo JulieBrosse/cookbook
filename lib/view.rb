@@ -3,17 +3,18 @@ class View
     recipes.each_with_index do |recipe, index|
       puts "#{index + 1} - #{recipe.name} - #{recipe.description}"
     end
+    puts "-------------------------"
   end
 
   def ask_recipe_name
     puts "Name?"
-    "-----------"
+    ">"
     return gets.chomp
   end
 
   def ask_recipe_description
     puts "Description?"
-    "-----------"
+    ">"
     return gets.chomp
   end
 
@@ -24,7 +25,7 @@ class View
 
   def confirmation
     puts "------------------"
-    puts "Thank you for having done it!"
+    puts "Thank you!"
   end
 
   def error

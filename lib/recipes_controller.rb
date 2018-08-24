@@ -8,7 +8,7 @@ class RecipesController
   end
 
   def print_recipes
-    display_recipes
+    load_recipes
   end
 
   def add_recipe
@@ -23,7 +23,7 @@ class RecipesController
   end
 
   def remove_recipe
-    display_recipes
+    load_recipes
     #get the index of the recipe to delete
     index = @view.get_recipe_index
     #remove the recipe from the repo
@@ -32,7 +32,7 @@ class RecipesController
 
   private
 
-  def display_recipes
+  def load_recipes
     recipes = @cookbook.all
     if recipes == []
       @view.error
